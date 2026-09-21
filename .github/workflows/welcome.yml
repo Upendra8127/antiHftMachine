@@ -3,7 +3,7 @@ name: "Contributor Onboarding Welcome"
 on:
   issues:
     types: [opened]
-  pull_requests:
+  pull_request:
     types: [opened]
 
 permissions:
