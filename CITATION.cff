@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software in academic, quantitative finance, or industry research, please cite it as below."
+title: "antiHftMachine: Real-time Intraday Financial Signal Platform for Indian Equities"
+abstract: "A quantitative financial sentiment intelligence platform integrating FinBERT transformer models, spaCy named entity recognition, anti-manipulation filters, and end-of-day return verification for the Indian equity markets (NIFTY 500)."
+authors:
+  - family-names: "Yadav"
+    given-names: "Upendra"
+    email: "upendrayadav8127@gmail.com"
+    orcid: "https://orcid.org/0009-0000-0000-0000"
+version: 2.0.0
+date-released: 2026-09-21
+license: MIT
+repository-code: "https://github.com/Upendra8127/antiHftMachine"
+url: "https://github.com/Upendra8127/antiHftMachine"
+keywords:
+  - "algorithmic-trading"
+  - "financial-sentiment"
+  - "finbert"
+  - "intraday-signals"
+  - "nifty-500"
+  - "natural-language-processing"
+  - "anti-manipulation"

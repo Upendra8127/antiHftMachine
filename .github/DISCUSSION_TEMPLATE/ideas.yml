@@ -1,0 +1,19 @@
+title: "[IDEA] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your innovative algorithmic idea, trading indicator, or NLP enhancement for antiHftMachine!
+  - type: input
+    id: title
+    attributes:
+      label: Idea Title
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Detailed Proposal & Expected Impact
+    validations:
+      required: true

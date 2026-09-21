@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/Upendra8127/antiHftMachine/discussions
+    about: Ask questions, share ideas, and discuss algorithmic trading signals.
+  - name: Security Vulnerability Reporting
+    url: https://github.com/Upendra8127/antiHftMachine/security/advisories/new
+    about: Report potential vulnerabilities confidentially following our security policy.
+  - name: Project Documentation
+    url: https://github.com/Upendra8127/antiHftMachine#readme
+    about: Read the architecture, setup guides, and mathematical proofs.

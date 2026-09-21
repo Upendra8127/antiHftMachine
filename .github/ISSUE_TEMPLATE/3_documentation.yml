@@ -1,0 +1,25 @@
+name: "Documentation Improvement"
+description: "Suggest improvements, fixes, or additions to project documentation."
+title: "[DOCS]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: doc_area
+    attributes:
+      label: Documentation Section
+      placeholder: e.g., README Architecture Diagram / API Spec / Mathematical Proofs
+    validations:
+      required: true
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Issue Description
+      description: What is unclear, missing, or outdated?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_fix
+    attributes:
+      label: Suggested Correction
+    validations:
+      required: false

@@ -1,0 +1,42 @@
+name: "Feature Request"
+description: "Suggest an enhancement or innovative capability for antiHftMachine."
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We appreciate ideas for advancing financial sentiment analysis and intraday signal generation!
+  - type: input
+    id: title
+    attributes:
+      label: Feature Title
+      placeholder: e.g., Real-time WebSocket streaming for price updates
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Gap
+      description: What challenge does this feature solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution & Architectural Design
+      description: Describe the design, APIs, or mathematical models involved.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Approaches Considered
+    validations:
+      required: false
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Willingness to Contribute
+      options:
+        - label: I am willing to submit a pull request implementing this feature.

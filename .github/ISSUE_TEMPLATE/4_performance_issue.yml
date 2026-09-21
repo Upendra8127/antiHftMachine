@@ -1,0 +1,40 @@
+name: "Performance Issue"
+description: "Report a performance regression, latency bottleneck, or high memory consumption."
+title: "[PERF]: "
+labels: ["performance", "triage"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Performance Summary
+      placeholder: e.g., FinBERT batch inference latency exceeds 2.5s on 50 articles
+    validations:
+      required: true
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Affected Subsystem
+      options:
+        - Inference Latency (FinBERT / NLP)
+        - Database Throughput (SQLite / SQLAlchemy)
+        - Web Polling / Network I/O
+        - Client UI Render / FPS Drops
+        - Memory Footprint / Heap Growth
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Observed Metrics vs Expected Target
+      placeholder: |
+        Expected: < 500ms pipeline execution
+        Observed: ~2.8s under 50 simultaneous headline inputs
+    validations:
+      required: true
+  - type: textarea
+    id: profiling_data
+    attributes:
+      label: Profiling & Benchmark Data
+      description: Attach memory profiling, cProfile logs, or Chrome DevTools traces if available.
+    validations:
+      required: false

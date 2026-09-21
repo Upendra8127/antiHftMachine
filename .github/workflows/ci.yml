@@ -1,0 +1,60 @@
+name: "CI Pipeline"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test-matrix:
+    name: "Node Test Matrix (${{ matrix.node-version }})"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 22, 24]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Run Zero-Dependency Test Suite
+        run: node --test tests/*.test.js
+
+  validation:
+    name: "Code Quality & Asset Integrity"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verify JSON Validity
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('package.json'))"
+          node -e "JSON.parse(require('fs').readFileSync('backend/nifty500.json'))"
+
+      - name: Verify Security & Governance Files
+        run: |
+          test -f GOVERNANCE.md
+          test -f CONTRIBUTING.md
+          test -f CODE_OF_CONDUCT.md
+          test -f SECURITY.md
+          test -f SUPPORT.md
+          test -f ROADMAP.md
+          test -f CHANGELOG.md
+          test -f CITATION.cff
+          test -f LICENSE
+          test -f .github/CODEOWNERS

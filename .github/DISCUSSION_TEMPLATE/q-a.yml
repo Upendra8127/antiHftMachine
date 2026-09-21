@@ -1,0 +1,19 @@
+title: "[Q&A] "
+labels: ["q-a"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask questions regarding pipeline architecture, FinBERT models, setup, or return tracking logic.
+  - type: input
+    id: topic
+    attributes:
+      label: Question Topic
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Detailed Question
+    validations:
+      required: true

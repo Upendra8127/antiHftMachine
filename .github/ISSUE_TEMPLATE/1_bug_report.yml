@@ -1,0 +1,84 @@
+name: "Bug Report"
+description: "File a structured bug report for antiHftMachine."
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please provide detailed steps to reproduce.
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A concise description of the defect.
+      placeholder: e.g., Headline parsing fails when title contains Unicode emojis
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      description: Select the subsystem where the issue occurs.
+      options:
+        - Backend Pipeline (FastAPI / APScheduler)
+        - AI Engine (FinBERT / Sentiment)
+        - Entity Extraction (spaCy NER)
+        - Database Layer (SQLite / SQLAlchemy)
+        - Frontend UI (React / Glassmorphism)
+        - Automated Testing Suite
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows 11 / 10
+        - Ubuntu / Debian Linux
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Container / Docker
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (if UI issue)
+      placeholder: e.g., Chrome 128, Firefox 130, Edge 128
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: How can maintainers reproduce this bug?
+      placeholder: |
+        1. Start backend server with `python -m uvicorn main:app`
+        2. Ingest test RSS payload with ...
+        3. Observe error output in logs ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs & Stack Traces
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contributor Verification
+      options:
+        - label: I have searched existing issues and confirmed this is not a duplicate.
+          required: true
+        - label: I agree to follow this project's Code of Conduct.
+          required: true

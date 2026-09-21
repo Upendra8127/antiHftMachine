@@ -1,0 +1,8 @@
+node_modules/
+backend/venv/
+dist/
+build/
+*.db
+*.db-shm
+*.db-wal
+package-lock.json

@@ -1,0 +1,24 @@
+{
+  "name": "anti-hft-machine",
+  "version": "2.0.0",
+  "description": "Real-time Intraday Financial Signal Platform for Indian Stock Market (NIFTY 500)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate": "npm test"
+  },
+  "keywords": [
+    "algorithmic-trading",
+    "financial-sentiment",
+    "finbert",
+    "nifty-500",
+    "intraday-signals",
+    "anti-manipulation",
+    "hft-countermeasure"
+  ],
+  "author": "Upendra Yadav <upendrayadav8127@gmail.com>",
+  "license": "MIT"
+}
